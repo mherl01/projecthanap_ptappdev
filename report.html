@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Item - Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h2>Campus Lost & Found</h2>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="report.html">Report Item</a>
+                <a href="admin-claims.html">Admin Verification</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-container">
+            <h2>Report an Item</h2>
+            <form id="reportForm" onsubmit="handleReportSubmit(event)">
+                <div class="form-group">
+                    <label for="reportType">Report Type</label>
+                    <select id="reportType" required>
+                        <option value="">Select Type</option>
+                        <option value="lost">I Lost an Item</option>
+                        <option value="found">I Found an Item</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" placeholder="e.g. Black Backpack" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="documents">Documents / IDs</option>
+                        <option value="personal">Personal Belongings</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location Lost/Found</label>
+                    <input type="text" id="location" placeholder="e.g. Gym, Room 302" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Detailed Description</label>
+                    <textarea id="description" rows="4" placeholder="Describe color, brand, distinguishing marks..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Contact Email</label>
+                    <input type="email" id="contactEmail" placeholder="student@school.edu.ph" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Submit Report</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Claims - Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h2>Campus Lost & Found (Admin)</h2>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="report.html">Report Item</a>
+                <a href="admin-claims.html">Admin Verification</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Claim Verification Requests</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Claim ID</th>
+                        <th>Item Name</th>
+                        <th>Claimant</th>
+                        <th>Date Submitted</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CLM-001</td>
+                        <td>Blue Tumbler</td>
+                        <td>Juan Dela Cruz</td>
+                        <td>Oct 15, 2026</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>
+                            <button class="btn-approve" onclick="updateStatus(this, 'Approved')">Approve</button>
+                            <button class="btn-reject" onclick="updateStatus(this, 'Rejected')">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

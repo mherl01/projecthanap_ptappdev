@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost and Found System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h2>Campus Lost & Found</h2>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="report.html">Report Item</a>
+                <a href="admin-claims.html">Admin Verification</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Lost Something on Campus?</h1>
+            <p>Search found items or report a lost item quickly.</p>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by item name (e.g., Wallet, Keys, ID)...">
+                <button onclick="searchItem()">Search</button>
+            </div>
+        </section>
+
+        <section class="recent-items">
+            <h2>Recently Reported Items</h2>
+            <div class="card-grid" id="itemsGrid">
+                <div class="card">
+                    <span class="badge lost">Lost</span>
+                    <h3>Blue Tumbler</h3>
+                    <p><strong>Location:</strong> Library 2nd Floor</p>
+                    <p><strong>Date:</strong> Oct 14, 2026</p>
+                    <a href="report.html" class="btn-secondary">Claim Item</a>
+                </div>
+                <div class="card">
+                    <span class="badge found">Found</span>
+                    <h3>Keys with Red Keychain</h3>
+                    <p><strong>Location:</strong> Student Center</p>
+                    <p><strong>Date:</strong> Oct 15, 2026</p>
+                    <a href="report.html" class="btn-secondary">Claim Item</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

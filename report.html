@@ -1,72 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report Item - Campus Lost & Found</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <h2>Campus Lost & Found</h2>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="report.html">Report Item</a>
-                <a href="admin-claims.html">Admin Verification</a>
-            </nav>
-        </div>
-    </header>
 
-    <main class="container">
-        <section class="form-container">
-            <h2>Report an Item</h2>
-            <form id="reportForm" onsubmit="handleReportSubmit(event)">
-                <div class="form-group">
-                    <label for="reportType">Report Type</label>
-                    <select id="reportType" required>
-                        <option value="">Select Type</option>
-                        <option value="lost">I Lost an Item</option>
-                        <option value="found">I Found an Item</option>
-                    </select>
-                </div>
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Project HANAP - Report Item</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#dae2fd", "outline": "#72777f", "on-tertiary": "#ffffff", "primary-fixed-dim": "#9ecbfa", "on-error-container": "#93000a", "outline-variant": "#c2c7cf", "on-error": "#ffffff", "on-surface-variant": "#42474e", "tertiary-fixed-dim": "#c0c7ce", "tertiary-container": "#52595f", "on-secondary-fixed-variant": "#004395", "inverse-surface": "#283044", "primary-container": "#2b5b84", "surface-container-low": "#f2f3ff", "on-primary-fixed": "#001d33", "on-tertiary-container": "#c8cfd6", "on-background": "#131b2e", "error": "#ba1a1a", "on-primary-container": "#a8d2ff", "surface": "#faf8ff", "on-secondary-fixed": "#001a42", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface-tint": "#33628b", "surface-bright": "#faf8ff", "tertiary-fixed": "#dce3ea", "on-secondary-container": "#fefcff", "background": "#faf8ff", "secondary-container": "#2170e4", "primary-fixed": "#cfe5ff", "on-primary-fixed-variant": "#154a72", "tertiary": "#3a4247", "secondary": "#0058be", "inverse-primary": "#9ecbfa", "on-tertiary-fixed": "#151c21", "surface-container-high": "#e2e7ff", "error-container": "#ffdad6", "secondary-fixed-dim": "#adc6ff", "secondary-fixed": "#d8e2ff", "surface-container-lowest": "#ffffff", "surface-dim": "#d2d9f4", "inverse-on-surface": "#eef0ff", "primary": "#09436b", "surface-container": "#eaedff", "surface-variant": "#dae2fd", "on-surface": "#131b2e", "on-tertiary-fixed-variant": "#40484d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2.5rem", "margin-mobile": "1.25rem", "space-md": "1rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}], "title-md": ["16px", {"lineHeight": "22px", "fontWeight": "600"}], "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-lg-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}] } } } };</script></head><body class="min-h-full bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col justify-between relative overflow-x-hidden">
+<!-- Ambient Aurora Canvas Blobs -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+<div class="absolute -top-36 left-1/2 -translate-x-1/2 w-[680px] h-[480px] bg-gradient-to-tr from-sky-400/25 via-indigo-300/20 to-teal-200/20 rounded-full blur-[110px]"></div>
+<div class="absolute top-1/3 -left-40 w-[420px] h-[420px] bg-blue-400/20 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -right-20 w-[480px] h-[480px] bg-indigo-500/15 rounded-full blur-[120px]"></div>
+</div>
+<!-- Floating Glass Navbar Dock -->
+<header class="fixed top-4 left-4 right-4 z-50 max-w-7xl mx-auto"><div class="h-16 px-gutter flex items-center justify-between gap-space-md rounded-2xl bg-white/75 backdrop-blur-2xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)]"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="dashboard" href="/dashboard"><div class="w-10 h-10 rounded-xl bg-primary-fixed/80 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm"><span class="material-symbols-outlined text-[22px]">explore</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary leading-none">Project HANAP</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed/70 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide">CSPC</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Campus Lost &amp; Found Portal</span></div></a></div><nav class="hidden md:flex items-center gap-1 p-1 rounded-full bg-surface-container-high/40 backdrop-blur-md border border-white/40"><a class="px-space-md py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-white/60 transition-all text-center" data-path="dashboard" href="/dashboard">Dashboard</a><a class="px-space-md py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-white/60 transition-all text-center" data-path="browse-catalog" href="/items">Browse Catalog</a><a class="px-space-md py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-white/60 transition-all text-center" data-path="report-lost-item" href="/items/new?type=lost">+ Report Lost Item</a><a aria-current="page" class="px-space-md py-1.5 transition-all bg-white text-primary font-title-md rounded-full shadow-[0_2px_10px_-2px_rgba(15,23,42,0.12),inset_0_1px_1px_rgba(255,255,255,0.9)]" data-path="report-found-item" href="/items/new?type=found">+ Report Found Item</a></nav><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-white/70 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center leading-none ring-2 ring-white">2</span></button><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary-container to-primary text-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left leading-tight"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Jake E.</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high/70 text-on-surface-variant font-label-sm text-label-sm">Student</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">BSIT - CSPC</span></div></div><a class="hidden sm:flex items-center gap-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-error transition-colors ml-space-xs" data-path="logout" href="#"><span class="material-symbols-outlined text-[18px]">logout</span>Logout</a></div></div></header>
+<main class="relative z-10 w-full pt-28 pb-16 px-gutter flex-1 flex flex-col items-center justify-center"><div class="w-full max-w-[780px] mx-auto py-4">
+<!-- Glowing Top Segmented Toggle Switch -->
+<div class="flex flex-col items-center text-center mb-6">
+<div class="inline-flex p-1.5 bg-white/70 backdrop-blur-xl border border-white/80 rounded-full mb-3 shadow-[0_8px_20px_rgba(0,0,0,0.04),inset_0_1px_2px_rgba(255,255,255,0.8)]" id="reportModeToggle" role="tablist">
+<button class="px-6 py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-white/50 transition-all flex items-center gap-1.5" id="tabLostBtn" type="button"><span class="text-xs">🔍</span> Lost</button>
+<button aria-selected="true" class="px-6 py-1.5 rounded-full font-label-lg text-label-lg bg-gradient-to-r from-[#2B5B84] to-[#1E40AF] text-white shadow-[0_4px_14px_rgba(43,91,132,0.35)] transition-all flex items-center gap-1.5" id="tabFoundBtn" type="button"><span class="text-xs">🙌</span> Found</button>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" id="formHeading">Report an Item</h1>
+</div>
+<!-- Centered Frosted-Glass Studio Container -->
+<form action="/items/1042" class="bg-white/[0.82] backdrop-blur-2xl p-8 rounded-3xl border border-white/80 shadow-[0_20px_50px_rgba(15,23,42,0.08),0_1px_1px_rgba(255,255,255,0.9)_inset] flex flex-col gap-6" id="itemReportForm" method="GET">
+<!-- 2-Column Inputs Grid with Glowing Azure Focus Rings -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- 1. Item Title -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="itemTitle">Item Title</label>
+<input class="w-full h-11 px-3.5 rounded-xl border border-outline-variant/60 bg-white/70 backdrop-blur-sm text-on-surface font-body-md text-body-md focus:border-sky-500 focus:ring-4 focus:ring-sky-500/20 focus:bg-white outline-none transition-all shadow-sm" id="itemTitle" name="title" placeholder="Item name" required="" type="text" value="Blue CSPC CCS Department ID Lanyard"/>
+</div>
+<!-- 2. Category Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="itemCategory">Category</label>
+<div class="relative">
+<select class="w-full h-11 px-3.5 pr-9 rounded-xl border border-outline-variant/60 bg-white/70 backdrop-blur-sm text-on-surface font-body-md text-body-md appearance-none focus:border-sky-500 focus:ring-4 focus:ring-sky-500/20 focus:bg-white outline-none transition-all shadow-sm" id="itemCategory" name="category" required="">
+<option selected="" value="documents_ids">Documents &amp; IDs</option>
+<option value="electronics">Electronics</option>
+<option value="clothing">Clothing</option>
+<option value="keys">Keys &amp; Cards</option>
+<option value="books">Books &amp; Stationery</option>
+<option value="others">Other Valuables</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- 3. Campus Location with Interactive Quick-Chips -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="campusLocation">Campus Location</label>
+<div class="relative">
+<select class="w-full h-11 px-3.5 pr-9 rounded-xl border border-outline-variant/60 bg-white/70 backdrop-blur-sm text-on-surface font-body-md text-body-md appearance-none focus:border-sky-500 focus:ring-4 focus:ring-sky-500/20 focus:bg-white outline-none transition-all shadow-sm" id="campusLocation" name="location" required="">
+<option selected="" value="Main Library">Main Library</option>
+<option value="ComLab 2">ComLab 2</option>
+<option value="Canteen">Canteen</option>
+<option value="Gym">Gym</option>
+<option value="Student Pavilion">Student Pavilion</option>
+<option value="Main Gate Guardhouse">Main Gate Guardhouse</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[20px] pointer-events-none">expand_more</span>
+</div>
+<!-- Location Quick-Chips -->
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<button class="px-2.5 py-1 rounded-full text-xs font-label-sm bg-sky-100/70 border border-sky-300 text-primary hover:bg-sky-200/80 transition-all cursor-pointer" onclick="document.getElementById('campusLocation').value='Main Library'" type="button">Main Library</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-label-sm bg-white/70 border border-white/80 text-on-surface-variant hover:bg-sky-50 hover:text-primary transition-all cursor-pointer" onclick="document.getElementById('campusLocation').value='ComLab 2'" type="button">ComLab 2</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-label-sm bg-white/70 border border-white/80 text-on-surface-variant hover:bg-sky-50 hover:text-primary transition-all cursor-pointer" onclick="document.getElementById('campusLocation').value='Canteen'" type="button">Canteen</button>
+<button class="px-2.5 py-1 rounded-full text-xs font-label-sm bg-white/70 border border-white/80 text-on-surface-variant hover:bg-sky-50 hover:text-primary transition-all cursor-pointer" onclick="document.getElementById('campusLocation').value='Gym'" type="button">Gym</button>
+</div>
+</div>
+<!-- 4. Date & Time -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="incidentTime">Date &amp; Time</label>
+<input class="w-full h-11 px-3.5 rounded-xl border border-outline-variant/60 bg-white/70 backdrop-blur-sm text-on-surface font-body-md text-body-md focus:border-sky-500 focus:ring-4 focus:ring-sky-500/20 focus:bg-white outline-none transition-all shadow-sm" id="incidentTime" name="timestamp" required="" type="text" value="October 24, 2025 • 10:15 AM"/>
+</div>
+</div>
+<!-- Smart Photo Dropzone -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface">Photo</label>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 text-[11px] font-label-sm font-medium">⚡ Auto-Compressed • &lt;3s Load</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-3">
+<label class="flex-1 w-full border-2 border-dashed border-sky-300/60 bg-white/40 hover:bg-white/75 backdrop-blur-md rounded-2xl p-4 flex items-center justify-center gap-2 cursor-pointer hover:border-primary transition-all group shadow-[inset_0_1px_2px_rgba(255,255,255,0.7)]">
+<input accept="image/*" class="hidden" type="file"/>
+<span class="material-symbols-outlined text-primary/80 group-hover:scale-110 transition-transform text-[22px]">photo_camera</span>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-primary transition-colors">Add photo</span>
+</label>
+<!-- Thumbnail Preview Chip -->
+<div class="flex items-center gap-2.5 p-2 pr-3 rounded-2xl border border-white/80 bg-white/75 backdrop-blur-xl shadow-sm shrink-0">
+<img alt="Thumbnail" class="w-10 h-10 rounded-xl object-cover ring-1 ring-black/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC52ZSoZtTsRXWL2qpL-rvZW7mKcaQDsLGrK-6CAxHGXlFEpij_IjmHDO65m8vCXLNFL5EWYiBeHKBHn1hsb_gDkM1vZRbcamXLjLIiNHLMrhV60OESiceEExyWF1Yj5gFpK5am0NClmcgowAxOXcKTPOOHqM9Z2K7xL05NKXs8M-0DOfvMehT-iwC9R8nxWKvPxnd06JXINtEU1o742GXFab6KCJM0F4ZpwzZtofAcJlL6v1tX4LEm"/>
+<span class="font-label-sm text-label-sm text-on-surface truncate max-w-[110px]">lanyard.jpg</span>
+<button aria-label="Remove" class="text-outline hover:text-error transition-colors p-1" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Found Verification Glass Pod -->
+<div class="p-4 rounded-2xl bg-gradient-to-br from-sky-500/10 via-surface-container/50 to-indigo-500/5 backdrop-blur-xl border border-sky-200/50 shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">key</span>
+<span>Custom Ownership Verification Question</span>
+</div>
+<input class="w-full h-11 px-3.5 rounded-xl border border-outline-variant/60 bg-white/80 backdrop-blur-sm text-on-surface font-body-md text-body-md focus:border-sky-500 focus:ring-4 focus:ring-sky-500/20 focus:bg-white outline-none transition-all shadow-sm" id="verificationChallenge" name="secret_challenge" placeholder="Custom ownership question" required="" type="text" value="What specific pin or sticker is attached to it?"/>
+<!-- Tactile Custody Card Toggle -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Custody Option</span>
+<div class="grid grid-cols-2 gap-2.5">
+<label class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl cursor-pointer transition-all border border-sky-300 bg-white text-primary shadow-sm has-[:checked]:border-sky-400 has-[:checked]:bg-white has-[:checked]:shadow-md font-label-md text-label-md">
+<input checked="" class="hidden" name="custody_mode" type="radio" value="meetup"/>
+<span class="text-base">🤝</span>
+<span>Peer Meetup</span>
+</label>
+<label class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl cursor-pointer transition-all border border-transparent bg-white/60 hover:bg-white text-on-surface-variant hover:text-on-surface font-label-md text-label-md">
+<input class="hidden" name="custody_mode" type="radio" value="vault"/>
+<span class="text-base">🛡️</span>
+<span>Security Desk</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="flex items-center justify-end gap-3 pt-4 border-t border-surface-container-high/60 mt-1">
+<a class="px-5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-white/60 transition-all" href="/items">Cancel</a>
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#2B5B84] to-[#1E40AF] hover:from-primary hover:to-blue-700 text-white font-label-lg text-label-lg shadow-[0_8px_20px_rgba(43,91,132,0.35)] hover:shadow-[0_10px_25px_rgba(30,64,175,0.45)] transition-all transform active:scale-[0.98]" type="submit">
+<span>Submit &amp; Match</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<script>
+  const tabLostBtn = document.getElementById('tabLostBtn');
+  const tabFoundBtn = document.getElementById('tabFoundBtn');
 
-                <div class="form-group">
-                    <label for="itemName">Item Name</label>
-                    <input type="text" id="itemName" placeholder="e.g. Black Backpack" required>
-                </div>
+  if (tabLostBtn && tabFoundBtn) {
+    tabLostBtn.addEventListener('click', () => {
+      tabLostBtn.className = "px-6 py-1.5 rounded-full font-label-lg text-label-lg bg-gradient-to-r from-[#2B5B84] to-[#1E40AF] text-white shadow-[0_4px_14px_rgba(43,91,132,0.35)] transition-all flex items-center gap-1.5";
+      tabFoundBtn.className = "px-6 py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-white/50 transition-all flex items-center gap-1.5";
+    });
 
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <select id="category" required>
-                        <option value="">Select Category</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="documents">Documents / IDs</option>
-                        <option value="personal">Personal Belongings</option>
-                        <option value="others">Others</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="location">Location Lost/Found</label>
-                    <input type="text" id="location" placeholder="e.g. Gym, Room 302" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Detailed Description</label>
-                    <textarea id="description" rows="4" placeholder="Describe color, brand, distinguishing marks..." required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="contactEmail">Contact Email</label>
-                    <input type="email" id="contactEmail" placeholder="student@school.edu.ph" required>
-                </div>
-
-                <button type="submit" class="btn-primary">Submit Report</button>
-            </form>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    tabFoundBtn.addEventListener('click', () => {
+      tabFoundBtn.className = "px-6 py-1.5 rounded-full font-label-lg text-label-lg bg-gradient-to-r from-[#2B5B84] to-[#1E40AF] text-white shadow-[0_4px_14px_rgba(43,91,132,0.35)] transition-all flex items-center gap-1.5";
+      tabLostBtn.className = "px-6 py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-white/50 transition-all flex items-center gap-1.5";
+    });
+  }
+</script></main><footer class="relative z-10 w-full bg-white/60 backdrop-blur-xl border-t border-white/60"><div class="max-w-7xl mx-auto px-gutter py-4 flex flex-col sm:flex-row items-center justify-between gap-2"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-primary">Project HANAP</span><span class="font-body-sm text-body-sm text-on-surface-variant">— CSPC</span></div><div class="font-body-sm text-body-sm text-on-surface-variant">© 2025 CSPC Student Council</div></div></footer></body></html>

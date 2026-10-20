@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta content="web_standard" name="shell-type"/>
     <title>Project HANAP - CSPC Campus Lost &amp; Found Portal</title>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -80,18 +79,41 @@
                             </button>
                         </div>
                     </div>
-                    <!-- Filter Chips -->
+                    <!-- Filter Chips Strip -->
                     <div class="flex items-center justify-center gap-2 sm:gap-2.5 overflow-x-auto w-full pb-1 pt-1">
                         <button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm border border-primary/20 transition-all whitespace-nowrap" type="button">
                             <span class="material-symbols-outlined text-[16px]">apps</span>
                             <span>All</span>
                             <span class="px-1.5 py-0.5 rounded-full bg-white/25 font-label-sm text-[11px] leading-none">14</span>
                         </button>
+                        <button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/60 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md border border-white/70 shadow-sm transition-all whitespace-nowrap" type="button">
+                            <span class="text-[14px]">🪪</span>
+                            <span>IDs &amp; Docs</span>
+                            <span class="px-1.5 py-0.5 rounded-full bg-surface-container-high/80 font-label-sm text-[11px] text-on-surface">5</span>
+                        </button>
+                        <button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/60 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md border border-white/70 shadow-sm transition-all whitespace-nowrap" type="button">
+                            <span class="text-[14px]">💻</span>
+                            <span>Electronics</span>
+                            <span class="px-1.5 py-0.5 rounded-full bg-surface-container-high/80 font-label-sm text-[11px] text-on-surface">6</span>
+                        </button>
+                        <button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/60 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md border border-white/70 shadow-sm transition-all whitespace-nowrap" type="button">
+                            <span class="text-[14px]">🎒</span>
+                            <span>Personal</span>
+                            <span class="px-1.5 py-0.5 rounded-full bg-surface-container-high/80 font-label-sm text-[11px] text-on-surface">3</span>
+                        </button>
+                        <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/40 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md border border-white/50 shadow-sm transition-all whitespace-nowrap" type="button">
+                            <span class="text-[13px]">📍</span>
+                            <span>Library</span>
+                        </button>
+                        <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/40 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md border border-white/50 shadow-sm transition-all whitespace-nowrap" type="button">
+                            <span class="text-[13px]">📍</span>
+                            <span>ComLab 2</span>
+                        </button>
                     </div>
                 </div>
-                <!-- 3-Column Gallery -->
+                <!-- 3-Column Gallery Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2 items-stretch">
-                    <!-- Card 1 -->
+                    <!-- Card 1: CSPC CCS Lanyard -->
                     <article class="flex flex-col rounded-3xl bg-surface-container-lowest/65 backdrop-blur-xl border border-white/80 shadow-sm overflow-hidden group">
                         <div class="relative h-64 w-full bg-surface-container-low overflow-hidden">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfpS5CQooo92DTk7R5ycxYkXj2s1Gb7TP9X9C5j1rRfYFgK3IY-vxEZgxZCknGngtvvraIFmKpnAg5cosZFFkkF3KM1SRwvepVzbnsc63VGVfgJgDBItmL79wDgp2ApymMA19ZHqTJCZjpix3XzaZ6PIdTYxg-slEznL9-cVsBmmAlVmPBeFKGWg6i0E0ODwCg9LmpngWRRZveOiKv96yJE-N0FFypH-bNlL2k6BslYHlEiRznN6y2"/>
@@ -103,6 +125,42 @@
                             <div class="flex flex-col min-w-0">
                                 <h3 class="font-headline-sm text-[16px] text-on-surface truncate font-semibold">CSPC CCS Lanyard</h3>
                                 <p class="font-body-sm text-[13px] text-on-surface-variant flex items-center gap-1 mt-0.5"><span>📍</span> Main Library</p>
+                            </div>
+                            <a class="shrink-0 h-9 px-3.5 rounded-full bg-surface-container-lowest/80 border border-white/80 hover:bg-primary hover:text-on-primary text-primary font-label-md transition-all flex items-center gap-1" href="report.html">
+                                <span>View &amp; Claim</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Card 2: SanDisk 32GB USB -->
+                    <article class="flex flex-col rounded-3xl bg-surface-container-lowest/65 backdrop-blur-xl border border-white/80 shadow-sm overflow-hidden group">
+                        <div class="relative h-64 w-full bg-surface-container-low overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu6GxpKj37zFqruLFlDeCcW4LfyO7NJG_oqU8bFEectwtzSs7oYf6ufDcecJ9EjxXeCt8QOyFh_z4zzPRt1Tvae0xKmJphDkFDcLdbF6sYxzN2qT8_WRViY6yhRrmWmazJi8ZS3El5gMV1UVXtNCsc6BrnY-ZNwBQtXZlZPK7l2xn6khZZoCU9QJvNkdPVvJK3ll1Ze1ZAEc46_lC1p2E9NZp6sj1b5uig5ehqTygl2_H4v0g1IKvS"/>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/90 text-white text-xs font-semibold shadow-sm">In Verification</span>
+                            </div>
+                        </div>
+                        <div class="p-4 flex items-center justify-between gap-3 bg-surface-container-lowest/50 border-t border-white/40">
+                            <div class="flex flex-col min-w-0">
+                                <h3 class="font-headline-sm text-[16px] text-on-surface truncate font-semibold">SanDisk 32GB USB</h3>
+                                <p class="font-body-sm text-[13px] text-on-surface-variant flex items-center gap-1 mt-0.5"><span>📍</span> ComLab 2</p>
+                            </div>
+                            <a class="shrink-0 h-9 px-3.5 rounded-full bg-surface-container-lowest/80 border border-white/80 hover:bg-primary hover:text-on-primary text-primary font-label-md transition-all flex items-center gap-1" href="report.html">
+                                <span>View &amp; Claim</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Card 3: Samsung Galaxy -->
+                    <article class="flex flex-col rounded-3xl bg-surface-container-lowest/65 backdrop-blur-xl border border-white/80 shadow-sm overflow-hidden group">
+                        <div class="relative h-64 w-full bg-surface-container-low overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAby7fD1uYj-krEAvyhdJ_q8WTwVpktgPE06Hx7hecm_7ir-h2BPWdz48j_ixXDRWaQpxSiLp6J_EA231YX1EOFqiJ-KWyQydPDNExX71imSPBBxlQLMT6SOmwzz5Nzcu4uz3VW-lypLFXwFvdsC9dB3n3WuNEtp1zIBmDnhqgyMKzWJl2fkRXGfQCZw0ffza2cFRCS4PoRJBUC8PBw6_9egXgf11Zh3_eT0oWmGe4A35VcWxYsCjJc"/>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/85 text-white text-xs font-semibold shadow-sm">🔒 Security Custody</span>
+                            </div>
+                        </div>
+                        <div class="p-4 flex items-center justify-between gap-3 bg-surface-container-lowest/50 border-t border-white/40">
+                            <div class="flex flex-col min-w-0">
+                                <h3 class="font-headline-sm text-[16px] text-on-surface truncate font-semibold">Samsung Galaxy</h3>
+                                <p class="font-body-sm text-[13px] text-on-surface-variant flex items-center gap-1 mt-0.5"><span>📍</span> Security Office</p>
                             </div>
                             <a class="shrink-0 h-9 px-3.5 rounded-full bg-surface-container-lowest/80 border border-white/80 hover:bg-primary hover:text-on-primary text-primary font-label-md transition-all flex items-center gap-1" href="report.html">
                                 <span>View &amp; Claim</span>

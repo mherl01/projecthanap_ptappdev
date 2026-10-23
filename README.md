@@ -21,10 +21,11 @@ I have converted and updated the following key frontend pages into **EJS (Embedd
 
 ---
 
-## 🧑‍💻 Development Team
+## 🧑‍💻 Development Team & Committee
 * **Merly Simbulan** - Frontend Development & EJS Templating
 * **Jake** - Project Lead & Backend Developer
 * **Janel** - Development Team Member
+* **John Paul Rendon** - Project Committee Member
 
 ---
 
